@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My CV</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%; 
+            object-fit: cover;
+        }
+
+        .timeline {
+            border-left: 2px solid #0d6efd;
+            padding-left: 20px;
+            margin-left: 10px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #0d6efd;
+        }
+
+        .skill-bar {
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .skill-progress {
+            height: 100%;
+            border-radius: 5px;
+            background: #0d6efd;
+            transition: width 1s ease;
+        }
+
+        .portfolio-item {
+            transition: transform 0.3s;
+        }
+
+        .portfolio-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">My CV</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#profile">Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Riwayat Pendidikan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Pengalaman Bekerja</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="Pahmi.JPG"Profile" class="profile-img mb-3">
+                </div>
+                <div class="col-md-8">
+                    <h1 class="mb-3">Pahmi Bagja</h1>
+                    <h3 class="text-primary mb-3">Back-end Develover</h3>
+                    <p class="lead">Website Pemula</p>
+                    <div class="mt-4">
+                        <p><i class="fas fa-map-marker-alt me-2"></i>Bekasi , Jawa Barat</p>
+                        <p><i class="fas fa-envelope me-2"></i>pahmibagja@gmail.com</p>
+                        <p><i class="fas fa-phone me-2"></i>0821-2200-7807</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Riwayat Pendidikan</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>SMK Negeri 1 Kota Sukabumi</h4>
+                    <h5 class="text-primary">Teknik Elektronika Industri</h5>
+                    <p class="text-muted">2016 - 2018</p>
+                    
+                </div>
+                <div class="timeline-item">
+                    <h4>Universitas Pelita Bangsa</h4>
+                    <h5 class="text-primary">Teknik Informatika</h5>
+                    <p class="text-muted">2023 - Sekarang</p>
+                    <p>Software Engineering</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Pengalaman Bekerja</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Enginering</h4>
+                    <h5 class="text-primary">Omron</h5>
+                    <p class="text-muted">2019 - 2020</p>
+                    <ul>
+                        <li>Wiring PLC</li>
+                       
+                    </ul>
+                </div>
+                <div class="timeline-item">
+                    <h4>System And Technical</h4>
+                    <h5 class="text-primary">PT.Suzuki Indomobil Motor</h5>
+                    <p class="text-muted">2019 - Sekarang</p>
+                    <ul>
+                        <li>Kaizen Improvement</li>
+                        <li>Development System</li>
+                       
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Technical Skills</h4>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>HTML/CSS</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <div class="d-flex justify-content-between mb-1">
+                            <span>Java</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <h4>Soft Skills</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Team Leadership</li>
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Kaizen Improvement</li>
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Problem Solving</li>
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Communication</li>
+                        <li class="mb-2"><i class="fas fa-check text-primary me-2"></i>Public Speaking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="mb-4">
+                        <a href="mailto:pahmibagja@gmail.com" class="btn btn-primary me-3">
+                            <i class="fas fa-envelope me-2"></i>Email
+                        </a>
+                        <a href="https://www.instagram.com/pahmi_b/" class="btn btn-primary me-3">
+                            <i class="fab fa-instagram me-2"></i>Instagram
+                        </a>
+                        <a href="https://www.facebook.com/pahmi.bagja/" class="btn btn-primary">
+                            <i class="fab fa-facebook me-2"></i>Facebook
+                        </a>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <form id="contactForm" action="send_email.php" method="POST">
+                                <div class="mb-3">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" required>
+                                </div>
+                                <div class="mb-3">
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Your Message" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2025 John Doe. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Message sent successfully!');
+            this.reset();
+        });
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('section');
+            let navLinks = document.querySelectorAll('.nav-link');
+            
+            sections.forEach(section => {
+                let top = section.offsetTop - 100;
+                let bottom = top + section.offsetHeight;
+                let scroll = window.scrollY;
+                let id = section.getAttribute('id');
+                
+                if (scroll >= top && scroll < bottom) {
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + id) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
